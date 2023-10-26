@@ -2,9 +2,13 @@ class Solution:
     def decode(self, encoded: List[int], first: int) -> List[int]:
         arr=[]
         arr = [first]
+        x= arr[0]
         for i in range(len(encoded)):
-            arr.append(arr[-1] ^ encoded[i])
+            x = (x ^ encoded[i])
+            arr.append(x)     
         return arr
+
+        #Yayyy!!
 
 
         
